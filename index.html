@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <title>LimitBox - jQuery Plugin</title>
+
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    
+    <script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.limitbox.js"></script>
+</head>
+
+<body>
+
+
+
+
+
+<h1>LimitBox - jQuery Plugin</h1>
+
+
+
+<script type="text/javascript">
+var now = new Date();
+$(function() {
+    $('body').limitbox({
+        before:     '設定時間前のテキスト',
+        after:      '設定時間後のテキスト',
+        mode:       'bottom-right',          // 'top-left', 'top-right', 'bottom-left', 'bottom-right'のいずれか
+        x:          50,                      // modeで設定したrightまたはleftからのピクセル数
+        y:          50,                      // modeで設定したtopmまたはbottomからのピクセル数
+        year:       now.getFullYear(),
+        month:      now.getMonth()+1,
+        date:       now.getDate(),
+        hour:       now.getHours(),
+        minute:     now.getMinutes()+1,
+        fadeintime: 1.2                      // 最初の表示の遅延時間
+    });
+});
+</script>
+
+
+</body>
+</html>
